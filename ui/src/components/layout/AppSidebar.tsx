@@ -17,6 +17,7 @@ import {
   Megaphone,
   Phone,
   Plug,
+  Radio,
   Settings,
   ShieldCheck,
   TrendingUp,
@@ -146,6 +147,11 @@ const NAV_SECTIONS: SidebarNavSection[] = [
   {
     label: "MANAGE",
     items: [
+      {
+        title: "Live Calls",   // MIB: идущие звонки, живой разговор (mib_live)
+        url: "/live",
+        icon: Radio,
+      },
       {
         title: "Agent Runs",
         url: "/usage",
