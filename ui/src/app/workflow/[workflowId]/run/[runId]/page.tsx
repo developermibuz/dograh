@@ -1004,6 +1004,18 @@ export default function WorkflowRunPage() {
             </div>
         );
     }
+    else if (workflowRun && !workflowRun.is_completed) {
+        // MIB: идущий звонок - живой разговор (mib_live), по окончании страница обновляется
+        returnValue = (
+            <div className="flex h-full justify-center p-6">
+                <div className="h-full min-h-0 w-full max-w-2xl">
+                    <ConversationRailFrame className="h-full">
+                        <LiveRunPanel runId={Number(runId)} onCompleted={() => window.location.reload()} />
+                    </ConversationRailFrame>
+                </div>
+            </div>
+        );
+    }
     else {
         returnValue = (
             <div className="flex h-full items-center justify-center p-6">
