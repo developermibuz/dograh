@@ -31,3 +31,5 @@ node_modules/
 .superpowers/
 docs/superpowers/
 .gstack/
+
+.idea/
